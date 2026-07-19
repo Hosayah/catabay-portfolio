@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/projects", "destination": "/projects/index.html" },
+    { "source": "/experience", "destination": "/experience/index.html" },
+    { "source": "/stack", "destination": "/stack/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
+    { "source": "/CATABAY_JOSIAH_CV.pdf", "headers": [{ "key": "Content-Disposition", "value": "inline; filename=Josiah-Daniel-Catabay-CV.pdf" }] }
+  ]
+}
