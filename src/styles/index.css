@@ -13,11 +13,15 @@
   --line: #d4d4cf;
   --soft: #ebebe7;
   --mono: 'DM Mono', monospace;
+  --page-gutter: clamp(18px, 4vw, 64px);
+  --section-space: clamp(72px, 10vw, 140px);
+  --layout-gap: clamp(18px, 3vw, 42px);
+  --content-max: 1440px;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; overflow-x: hidden; }
+body { margin: 0; min-width: 320px; }
 button, a { font: inherit; }
 a { color: inherit; }
 button { color: inherit; }
@@ -27,6 +31,14 @@ img { max-width: 100%; display: block; }
 
 .skip-link { position: fixed; z-index: 100; left: 1rem; top: -5rem; padding: .8rem 1rem; color: #fff; background: #111; }
 .skip-link:focus { top: 1rem; }
+
+@media (max-width: 640px) {
+  :root {
+    --page-gutter: clamp(16px, 5vw, 24px);
+    --section-space: clamp(58px, 16vw, 84px);
+    --layout-gap: 20px;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }

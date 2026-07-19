@@ -39,7 +39,7 @@ export const projects: Project[] = [
       'Developed a React SPA with 37 route definitions and protected navigation for five distinct user roles.',
       'Engineered a 165,336-row dataset spanning 2010–2025, 53 provinces, and 89 crops, then refreshed it to 167,699 rows for the 2025 Q4 release.',
     ],
-    stack: ['Python', 'Flask', 'React', 'REST APIs', 'Random Forest', 'MySQL', 'Android'],
+    stack: ['Python', 'Flask', 'React', 'REST APIs', 'Random Forest', 'MySQL', 'Kotlin'],
     images: [
       { src: cropWeb1, alt: 'CropForecast web dashboard displaying agricultural analytics', type: 'desktop', featured: true, caption: 'Agricultural analytics dashboard' },
       { src: cropWeb2, alt: 'CropForecast web application decision-support interface', type: 'desktop', featured: true, caption: 'Web decision-support workspace' },
@@ -128,7 +128,7 @@ export const stackGroups: StackGroup[] = [
   { category: 'Languages', items: ['Python', 'JavaScript', 'PHP', 'Java', 'SQL'], evidence: 'Core languages used across CropForecast, DagupanGovLedger, and PyVidNote.' },
   { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Tailwind CSS', 'Bootstrap', 'Responsive Design'], evidence: 'Role-based dashboards, responsive interfaces, single-page applications, and the live Greenovation educational website.' },
   { category: 'Backend', items: ['REST APIs', 'Model Inference APIs', 'JWT Authentication', 'Flask'], evidence: '91-endpoint shared backend, protected workflows, and deployed model access patterns.' },
-  { category: 'AI / ML', items: ['Random Forest', 'Whisper', 'BART', 'Transformers', 'PyTorch', 'LLM Integration'], evidence: 'Forecasting, speech recognition, summarization, and natural-language budget assistance.' },
+  { category: 'AI / ML', items: ['Random Forest', 'Whisper', 'BART', 'Transformers', 'PyTorch', 'LLM Integration', 'Pandas', 'Matplotlib', 'Sci-kit'], evidence: 'Forecasting, speech recognition, summarization, and natural-language budget assistance.' },
   { category: 'Data', items: ['MySQL', 'Firebase', 'Supabase'], evidence: 'Relational application data, authentication workflows, and cloud-backed products.' },
   { category: 'Blockchain', items: ['Solidity', 'Ethereum'], evidence: 'Immutable transaction records and verifiable public-spending audit trails.' },
   { category: 'Deployment', items: ['Firebase Hosting'], evidence: 'Public deployment and hosting of the Greenovation multi-page website.' },

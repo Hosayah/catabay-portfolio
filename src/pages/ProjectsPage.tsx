@@ -6,7 +6,7 @@ import { contact, projects } from '../config/portfolio'
 export function ProjectsPage() {
   return (
     <div className="inner-page">
-      <header className="page-intro"><p className="eyebrow">01 / Selected work</p><h1>Projects built<br />to solve real problems.</h1><p>Full-stack platforms, machine learning pipelines, and accessible interfaces—designed and engineered from data to delivery.</p></header>
+      <header className="page-intro"><p className="eyebrow">01 / Selected work</p><h1>Projects built<span className="heading-break"><br /></span>{' '}to solve real problems.</h1><p>Full-stack platforms, machine learning pipelines, and accessible interfaces—designed and engineered from data to delivery.</p></header>
       <div className="case-studies">
         {projects.map((project, index) => (
           <article className={`case-study ${project.supporting ? 'case-study-supporting' : ''}`} id={project.slug} key={project.slug}>
