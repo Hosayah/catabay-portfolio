@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { contact } from '../../config/portfolio'
-import { defaultMailUrl, gmailComposeUrl } from '../../services/email'
+import { gmailComposeUrl } from '../../services/email'
 import { Arrow } from '../common/Arrow'
 
 export function ContactSection() {
