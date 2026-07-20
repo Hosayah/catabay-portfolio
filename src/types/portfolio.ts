@@ -22,7 +22,26 @@ export type Project = {
   sections?: { label: string; text: string }[]
 }
 
-export type Route = 'home' | 'projects' | 'experience' | 'stack' | 'not-found'
+export type BlogImage = {
+  src: string
+  alt: string
+  photographer: string
+  photographerUrl: string
+  sourceUrl: string
+}
+
+export type BlogPost = {
+  slug: string
+  title: string
+  excerpt: string
+  publishedAt: string
+  category: string
+  cover: BlogImage
+  body: string
+  readingTime: number
+}
+
+export type Route = 'home' | 'projects' | 'experience' | 'stack' | 'blogs' | 'blog-post' | 'not-found'
 
 export type Navigate = (path: string) => void
 

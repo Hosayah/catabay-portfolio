@@ -6,6 +6,8 @@ import { ContactSection } from '../components/layout/ContactSection'
 import { contact, projects } from '../config/portfolio'
 import type { Navigate } from '../types/portfolio'
 import { Arrow } from '../components/common/Arrow'
+import { BlogCard } from '../components/common/BlogCard'
+import { blogPosts } from '../config/blogs'
 
 export function HomePage({ navigate }: { navigate: Navigate }) {
   const primaryProjects = projects.filter((project) => !project.supporting)
@@ -59,6 +61,12 @@ export function HomePage({ navigate }: { navigate: Navigate }) {
         <SectionHeading number="03" title="Core stack" link="/stack" navigate={navigate} />
         <div className="stack-marquee" id="stack-preview">{['Python', 'React', 'REST APIs', 'PyTorch', 'MySQL', 'Solidity', 'LLM Integration'].map((item) => <span key={item}>{item}</span>)}</div>
       </section>
+      {blogPosts[0] && (
+        <section className="section-block home-writing" aria-labelledby="writing-preview">
+          <SectionHeading number="04" title="Latest writing" link="/blogs" navigate={navigate} />
+          <div id="writing-preview"><BlogCard post={blogPosts[0]} navigate={navigate} featured showImage={false} /></div>
+        </section>
+      )}
       <ContactSection />
     </>
   )

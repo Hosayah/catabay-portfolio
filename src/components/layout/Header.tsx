@@ -5,7 +5,7 @@ import { Arrow } from '../common/Arrow'
 export function Header({ route, navigate }: { route: Route; navigate: Navigate }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuButton = useRef<HTMLButtonElement>(null)
-  const links = [['/', 'Home', 'home'], ['/projects', 'Projects', 'projects'], ['/experience', 'Experience', 'experience'], ['/stack', 'Stack', 'stack']] as const
+  const links = [['/', 'Home', 'home'], ['/projects', 'Projects', 'projects'], ['/experience', 'Experience', 'experience'], ['/stack', 'Stack', 'stack'], ['/blogs', 'Blogs', 'blogs']] as const
 
   useEffect(() => setMenuOpen(false), [route])
 
@@ -52,7 +52,7 @@ export function Header({ route, navigate }: { route: Route; navigate: Navigate }
       </button>
       <nav id="primary-navigation" aria-label="Primary navigation">
         {links.map(([path, label, key]) => (
-          <a key={path} href={path} aria-current={route === key ? 'page' : undefined} onClick={(event) => openRoute(event, path)}>{label}</a>
+          <a key={path} href={path} aria-current={route === key || (key === 'blogs' && route === 'blog-post') ? 'page' : undefined} onClick={(event) => openRoute(event, path)}>{label}</a>
         ))}
         <a className="mobile-contact-link" href="#contact" onClick={scrollToContact}>Let’s talk <Arrow /></a>
       </nav>

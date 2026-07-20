@@ -5,6 +5,8 @@
     { "source": "/projects", "destination": "/projects/index.html" },
     { "source": "/experience", "destination": "/experience/index.html" },
     { "source": "/stack", "destination": "/stack/index.html" },
+    { "source": "/blogs", "destination": "/blogs/index.html" },
+    { "source": "/blogs/:slug", "destination": "/blogs/:slug/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
